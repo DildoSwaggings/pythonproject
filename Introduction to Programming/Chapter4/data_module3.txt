@@ -1,0 +1,10 @@
+Tom Bombadil__________6.5 5.5 4.5
+Dain IJzervoet________6.7 7.2 7.7
+Thorin Eikenschild____6.8 7.8 7.3
+Meriadoc Brandebok____1.0 5.0 7.7
+Sam Gewissies_________2.3 4.5 6.7
+Gollem________________1.3 1.8 2.3
+Frodo Ballings________5.1 6.7 8.5
+Gandalf de Grijze_____9.1 9.5 9.9
+Peregrijn Toek________6.0 5.5 7.1
+Radagast de Bruine____8.0 9.0 9.5

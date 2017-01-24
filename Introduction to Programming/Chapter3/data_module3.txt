@@ -1,6 +1,6 @@
 Tom Bombadil__________6.5 5.5 4.5
-Dain IJzervoet________6.7 7.2 7.7
-Thorin Eikenschild____6.8 7.8 7.3
+Dain IJzervoet________6.7 
+Thorin Eikenschild____
 Meriadoc Brandebok____1.0 50 7.7
 Sam Gewissies_________2.3 4.5 6.7
 Gollem________________1.3 1.8 2.3

@@ -6,52 +6,44 @@ Assigment 6. Geography Grades 1
 
 #constants
 AANTAL_TOETSEN = 3
+LAAGST_MOGELIJKE_CIJFER = 1.0
+HOOGST_MOGELIJKE_CIJFER = 10.0
 
 #functions
-'''def controleer_cijfers(cijfers):
-    gecontroleerde_cijfer_lijst = []
-    for cijfer in cijfers:
-        #if cijfer >= 1.0 and cijfer <= 10.0:
-        gecontroleerde_cijfer_lijst =  gecontroleerde_cijfer_lijst(-1, cijfer)
-    return gecontroleerde_cijfer_lijst
-'''
-def gemiddelde(a):
-    cijfers = map(float, a.split(' '))#map
+
+def gemiddelde(losse_cijfers):
     som = 0
-    for cijfer in cijfers:
+    for cijfer in losse_cijfers:
         som += cijfer
-    gemiddelde = som / len(cijfers)
+    gemiddelde = som / len(losse_cijfers)
     return gemiddelde
     
 
 def cijfer_leerling(leerling):
     lijst_per_leerling = leerling.split('_')
     naam = lijst_per_leerling[0]
-    cijfer = gemiddelde(lijst_per_leerling[-1])
-    return naam, cijfer
-
-def controleer_range_cijfers(leerling):
-    lijst_per_leerling = leerling.split('_')
     cijfers = lijst_per_leerling[-1]
-    losse_cijfers = map(float, cijfers.split(' '))
+    cijfers_gestript = cijfers.split()
+    losse_cijfers = map(float, cijfers_gestript)
+    gemiddelde_cijfer = gemiddelde(controleer_aantal_cijfers(losse_cijfers))
+    return naam, gemiddelde_cijfer, losse_cijfers
+
+def controleer_range_cijfers(losse_cijfers):
     controle = 0
     for los_cijfer in losse_cijfers:
-        if los_cijfer >= 1.0 and los_cijfer <= 10.0:
+        if los_cijfer >= LAAGST_MOGELIJKE_CIJFER and los_cijfer <= HOOGST_MOGELIJKE_CIJFER:
             controle = controle
         else:
             controle += 1
     return controle
-        
-def controleer_aantal_cijfers(leerling):
-    lijst_per_leerling = leerling.split('_')
-    cijfers = lijst_per_leerling[-1]
-    losse_cijfers = map(float, cijfers.split(' '))
-    controle = 0
-    if len(losse_cijfers) == AANTAL_TOETSEN:
-        controle = controle
-    else:
-        controle += 1
-    return controle
+
+#controleert aantal cijfers en vult aantal cijfers aan met LAAGS_MOGELIJKE_CIJFER tot AANTAL_TOETSEN        
+def controleer_aantal_cijfers(losse_cijfers):
+    while len(losse_cijfers) < AANTAL_TOETSEN:
+        losse_cijfers.append(LAAGST_MOGELIJKE_CIJFER)
+    return losse_cijfers
+
+#execute
     
 if __name__ == "__main__": 
     #input
@@ -60,23 +52,17 @@ if __name__ == "__main__":
     element_per_leerling = invoer.split('\n')
     
     #control input and execute, else return error
-     
     #output
     print 'Report for group 2b'
     
     for leerling in element_per_leerling:
-        naam, cijfer = cijfer_leerling(leerling)
-        controle_range_cijfers = controleer_range_cijfers(leerling)
-        controle_aantal_cijfers = controleer_aantal_cijfers(leerling)
+        naam, gemiddelde_cijfer, losse_cijfers = cijfer_leerling(leerling)
+        controle_range_cijfers = controleer_range_cijfers(losse_cijfers)
         if controle_range_cijfers != 0:
             print 'There is an error in the range of the grades of %s'%naam
-        else:
-            if controle_aantal_cijfers != 0:
-                print 'There is an error in the number of grades of %s'%naam
-            else:      
-                print '%s has a average grade of %.1f' %(naam, cijfer)
+        else:    
+            print '%s has a average grade of %.1f' %(naam, gemiddelde_cijfer)
        
-        
     print 'End of report'
  
     

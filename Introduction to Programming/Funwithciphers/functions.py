@@ -24,15 +24,7 @@ def to_decimal(bin):
     return som                    
     print som
     
-to_decimal(101010)
 
-lijst = [
-"1101000",
-"1100101",
-"1101100",
-"1101100",
-"1101111"
-]
 # By using your function to decimal you can now decode the message.
 def binary_to_ascii(lst):
     msg = ""
@@ -41,4 +33,3 @@ def binary_to_ascii(lst):
         msg += chr(decimal_value)
     print(msg)
 
-binary_to_ascii(lijst)

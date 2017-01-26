@@ -22,21 +22,34 @@ def ceasar_encrypt_sentence(string_sentence, key):
     lijst = list(string_sentence)
     encrypted_sentence = ''
     for letter in lijst:
-        encrypted_letter = ceasar_encrypt_single_letter(letter, key)
+        if ord(letter) == 32:
+            encrypted_letter = letter
+        else:
+            encrypted_letter = ceasar_encrypt_single_letter(letter, key)
         encrypted_sentence += encrypted_letter
-    print encrypted_sentence
+    #print encrypted_sentence
     return encrypted_sentence
 
 def ceasar_decrypt_sentence(string_decrypted_sentence, key):
     lijst = list(string_decrypted_sentence)
     decrypted_sentence = ''
     for letter in lijst:
-        decrypted_letter = ceasar_decrypt_single_letter(letter, key)
+        if ord(letter) == 32:
+            decrypted_letter = letter
+        else:
+            decrypted_letter = ceasar_decrypt_single_letter(letter, key)
         decrypted_sentence += decrypted_letter
-    print decrypted_sentence
+    #print decrypted_sentence
     return decrypted_sentence
 
-ceasar_decrypt_sentence('jgnnq', 2)
+#testing the encrypt and decrypt functions
+m = "my sample message here"
+for k in range(1,1024):
+    if ceasar_decrypt_sentence(ceasar_encrypt_sentence(m, k), k) != m:
+        print ("Error for key %d on %s" %(k, m))
+print 'lekker bezig'
+ceasar_decrypt_sentence('jgnnq hoi', 2)
+ceasar_encrypt_sentence('hallo ik ben thom', 0)
 
 '''
 print ceasar_decrypt_single_letter('b', 1)

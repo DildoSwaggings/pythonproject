@@ -29,8 +29,8 @@ def ceasar_encrypt_sentence(string_sentence, key):
     #print encrypted_sentence
     return encrypted_sentence
 
-def ceasar_decrypt_sentence(string_decrypted_sentence, key):
-    lijst = list(string_decrypted_sentence)
+def ceasar_decrypt_sentence(string_encrypted_sentence, key):
+    lijst = list(string_encrypted_sentence)
     decrypted_sentence = ''
     for letter in lijst:
         decrypted_letter = ceasar_decrypt_single_letter(letter, key)

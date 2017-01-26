@@ -11,3 +11,6 @@ def square_sum(lst):
 my_list = [1,2,3]
 print(square_sum(my_list)) # Prints 14
 print(square_sum(my_list))
+
+lijst = range(0, 26)
+print lijst

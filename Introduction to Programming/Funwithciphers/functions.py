@@ -10,19 +10,19 @@ def to_binary(getal):
     else:
         return to_binary(getal/2) + str(getal%2)
 
-getal = to_binary(0)
-print getal
+#getal = to_binary(0)
+#print getal
 
 def to_decimal(bin):
     lijst = map(int, str(bin))
-    print lijst
+    #print lijst
     som = int(0)
     teller = 0
     for element in lijst:
         som += element * 2**(int(len(lijst))-teller-1)
         teller += 1
     return som                    
-    print som
+    #print som
     
 
 # By using your function to decimal you can now decode the message.
@@ -31,7 +31,7 @@ def binary_to_ascii(lst):
     for b in lst:
         decimal_value = int(to_decimal(b))
         msg += chr(decimal_value)
-    print(msg)
+    return(msg)
 
  #ceasar encrypt functions:
  

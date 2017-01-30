@@ -75,13 +75,12 @@ def split_single_sentence_and_decrypt(sentence_to_decrypt):
 
 #decrypts message using caesar or vigenere, depending on input
 def decrypt_caesar_or_vigenere(method, keyword, list_with_binary_code):
+    input_in_ascii = binary_to_ascii(list_with_binary_code)
     if method == 'vigenere':
-        input_in_ascii = binary_to_ascii(list_with_binary_code)
         decrypted_sentence = vigenere_decrypt(input_in_ascii, keyword)
         print decrypted_sentence
     elif method == 'caesar':
         keyword = int(keyword)
-        input_in_ascii = binary_to_ascii(list_with_binary_code)
         decrypted_sentence = caesar_decrypt(input_in_ascii, keyword)
         print decrypted_sentence
     else:

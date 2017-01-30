@@ -51,18 +51,28 @@ def function_value_at_x(algebraic_equiation, x):
     sum = 0
     for exponent in exponents:
         exponent_float = float(exponent)
-        exponent_of_x = x * (exponent_float)
+        exponent_of_x = x ** (exponent_float)
         sum += exponent_of_x * float(coefficients[exponents.index(exponent)])
-    return sum
+    return float(sum)
+
+
+sum = function_value_at_x(algebraic_equation, initial_guess_for_a_root)
+print 'test function function_value_at_x: %f'%sum
+print sum
 
 def newton(algebraic_equation, number_of_repetitions, x_n):
     if number_of_repetitions == 0:
         return x_n
     x_n_plus_1 = x_n * ((function_value_at_x(algebraic_equation, x_n))/  (function_value_at_x(derivative(algebraic_equation), x_n)))
-    newton(algebraic_equation, (number_of_repetitions - 1), x_n_plus_1)
-    
+    number_of_repetitions_new = int(number_of_repetitions - 1)
+    newton(algebraic_equation, number_of_repetitions_new, x_n_plus_1)
+
+print 'newton test:'    
 uitkomst = newton(algebraic_equation, number_of_repetitions, initial_guess_for_a_root)
-print uitkomst
+print 'This is your initial guess for the root: %f, this is your algebraic equation: %s, \
+this is your number of repetitions: %s, this is your answer: .' %(initial_guess_for_a_root, \
+algebraic_equation, number_of_repetitions)
+print 'This is the answer: %s'%uitkomst
     
                         
 

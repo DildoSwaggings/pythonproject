@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_H4jUQeCnEeaied7H0mhv3A" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_H4jUQuCnEeaied7H0mhv3A" bindingContexts="_H4j7UOCnEeaied7H0mhv3A">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
-  <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
+  <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_H4jUQuCnEeaied7H0mhv3A" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_IOnq4uCnEeaied7H0mhv3A" label="%trimmedwindow.label.eclipseSDK" x="150" y="150" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
@@ -11,6 +11,7 @@
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1485091911974"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_IOnq4uCnEeaied7H0mhv3A" selectedElement="_IOnq4-CnEeaied7H0mhv3A" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_IOnq4-CnEeaied7H0mhv3A" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_IZWUMeCnEeaied7H0mhv3A">
         <children xsi:type="advanced:Perspective" xmi:id="_IZWUMeCnEeaied7H0mhv3A" elementId="org.eclipse.ui.resourcePerspective" selectedElement="_IZWUMuCnEeaied7H0mhv3A" label="Resource" iconURI="platform:/plugin/org.eclipse.ui.ide.application/$nl$/icons/full/eview16/resource_persp.png">
@@ -167,7 +168,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IQw_8OCnEeaied7H0mhv3A" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_SuC3IOCnEeabHaAKWg63WQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_H5BOc-CnEeaied7H0mhv3A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gSdVUOkhEeaRtNaKD0hiXg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_H5BOc-CnEeaied7H0mhv3A"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IQw_8eCnEeaied7H0mhv3A" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -185,7 +186,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IQw_9eCnEeaied7H0mhv3A" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_SuEsUeCnEeabHaAKWg63WQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_H5AAX-CnEeaied7H0mhv3A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gSfKgekhEeaRtNaKD0hiXg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_H5AAX-CnEeaied7H0mhv3A"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IQw_9uCnEeaied7H0mhv3A" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

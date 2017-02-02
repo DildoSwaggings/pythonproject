@@ -15,14 +15,13 @@ def read_matrix(list_of_matricses, number):
     for line in input:
         row = map(int, line.split())
         result.append(row)
-    #result = result[0:-1] ###This can be done in an nicer way
     return result
 
 def print_matrix(matrix):
     for row in matrix:
         for element in row:
             print element,
-        print ''
+        print '' #This makes a new line for a new row
         
 def determinant_two_by_two_matrix(two_by_two_matrix):
     a, b, c, d = read_elements_two_by_two_matrix(two_by_two_matrix)
@@ -46,43 +45,35 @@ def check_and_give_lenght_n_by_n_matrix(n_by_n_matrix):
             return
     return number_of_rows
 
-def check_and_give_lenght_matrix(matrix):
-    lenght_row_one = len(matrix[0])
-    for row in matrix:
-        if len(row) != lenght_row_one:
-            print 'You entered a incomplete matrix'
-            return
-    lenght_rows_of_matrix = lenght_row_one
-    return lenght_rows_of_matrix
-
-def delete_column(column_number, matrix):
-    lenght_rows_of_matrix = check_and_give_lenght_matrix(matrix)
+def give_matrix_with_deleted_column(column_number, matrix):
     new_matrix = [row[0:column_number] + row[column_number + 1:] for row in matrix]
     return new_matrix
  
 def determinant_n_by_n_matrix(n_by_n_matrix):
     lenght_matrix = check_and_give_lenght_n_by_n_matrix(n_by_n_matrix)
+    if lenght_matrix == 1:
+        return int(n_by_n_matrix[0][0])
     if lenght_matrix == 2:
         return determinant_two_by_two_matrix(n_by_n_matrix)
     row_one = n_by_n_matrix[0]
     matrix_without_row_one = n_by_n_matrix[1: lenght_matrix]
     determinant = 0
-    for number in range(lenght_matrix):
-        determinant += (-1)**(number+1) * row_one[number] * determinant_n_by_n_matrix(delete_column(number, matrix_without_row_one))
+    for number in range(len(row_one)):
+        determinant += (-1)**(number+1) * row_one[number] * determinant_n_by_n_matrix(give_matrix_with_deleted_column(number, matrix_without_row_one))
     return determinant
 
-def start(number_of_matrix_in_file, list_of_matrices):
+def start(list_of_matrices, number_of_matrix_in_file):
     matrix_from_file =read_matrix(list_of_matrices, number_of_matrix_in_file)
     determinant = determinant_n_by_n_matrix(matrix_from_file)
     print 'The determinant of the matrix '
     print_matrix(matrix_from_file)
-    print 'is \n %s'%(determinant)
+    print 'is \n%.2f'%(determinant)
     
     
     
 ###execute###
 if __name__ == '__main__':
-    start(0, list_of_matrices_from_file)
+    start(list_of_matrices_from_file, 0)
     
 '''   
 #VRAGEN OP WERKCOLLEGE

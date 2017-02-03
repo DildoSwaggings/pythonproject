@@ -1,6 +1,6 @@
 '''
 Created on 31 jan. 2017
-Assigment Determinant
+Module 5, Assignment Determinant
 @author: Thom, tos340
 '''
 
@@ -55,5 +55,5 @@ def read_file_and_start(filename, number_of_matrix_in_file):
      
 ###execute###
 if __name__ == '__main__':
-    read_file_and_start('matrix3.txt', 1)
+    read_file_and_start('matrix2.txt', 3)
 
